@@ -1,17 +1,21 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import React from 'react'
 import Onboarding from 'react-native-onboarding-swiper';
+import Lottie from 'lottie-react-native';
+
+const {width, height} = Dimensions.get('window'); // Responsividade
 
 export default function OnboardingScreen() {
     return (
         <View style={styles.container}>
             <Onboarding
+                containerStyles={{paddingHorizontal: 15}}
                 pages={[
                     {
                         backgroundColor: '#fff',
                         image: (
-                            <View>
-                                <Text>Hello world</Text>
+                            <View style={styles.lottie}>
+                                <Lottie source={require('../assets/animations/boost.json')} autoPlay loop />
                             </View>
                         ),
                         title: 'Aumentar a Produtividade',
@@ -47,5 +51,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'white',
+    },
+    lottie: {
+        width: width*0.9,
+        height: width
     }
 })
