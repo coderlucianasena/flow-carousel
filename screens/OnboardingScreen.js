@@ -17,6 +17,16 @@ export default function OnboardingScreen() {
                         title: 'Onboarding',
                         subtitle: 'Done with React Native Onboarding Swiper',
                     },
+                    {
+                        backgroundColor: '#fff',
+                        image: (
+                            <View>
+                                <Text>Hello world</Text>
+                            </View>
+                        ),
+                        title: 'Onboarding',
+                        subtitle: 'Done with React Native Onboarding Swiper',
+                    },
                 ]}
             />
         </View>
