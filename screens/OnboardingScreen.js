@@ -25,7 +25,7 @@ export default function OnboardingScreen() {
                         backgroundColor: '#fff',
                         image: (
                             <View>
-                                <Text>Hello world</Text>
+                                <Lottie source={require('../assets/animations/boost.json')} autoPlay loop />
                             </View>
                         ),
                         title: 'Trabalhar Perfeitamente',
@@ -35,7 +35,7 @@ export default function OnboardingScreen() {
                         backgroundColor: '#fff',
                         image: (
                             <View>
-                                <Text>Hello world</Text>
+                                 <Lottie source={require('../assets/animations/boost.json')} autoPlay loop />
                             </View>
                         ),
                         title: 'Atingir metas mais altas',
