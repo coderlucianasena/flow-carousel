@@ -14,8 +14,8 @@ export default function OnboardingScreen() {
                                 <Text>Hello world</Text>
                             </View>
                         ),
-                        title: 'Onboarding',
-                        subtitle: 'Done with React Native Onboarding Swiper',
+                        title: 'Aumentar a Produtividade',
+                        subtitle: 'Inscreva-se neste canal para aumentar seu nível de produtividade',
                     },
                     {
                         backgroundColor: '#fff',
@@ -24,8 +24,18 @@ export default function OnboardingScreen() {
                                 <Text>Hello world</Text>
                             </View>
                         ),
-                        title: 'Onboarding',
-                        subtitle: 'Done with React Native Onboarding Swiper',
+                        title: 'Trabalhar Perfeitamente',
+                        subtitle: 'Faça seu trabalho perfeitamente sem interrupção',
+                    },
+                    {
+                        backgroundColor: '#fff',
+                        image: (
+                            <View>
+                                <Text>Hello world</Text>
+                            </View>
+                        ),
+                        title: 'Atingir metas mais altas',
+                        subtitle: 'Ao aumentar sua produtividade, ajudamos você a atingir metas mais altas',
                     },
                 ]}
             />
