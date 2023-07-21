@@ -12,7 +12,7 @@ export default function OnboardingScreen() {
                 containerStyles={{paddingHorizontal: 15}}
                 pages={[
                     {
-                        backgroundColor: '#fff',
+                        backgroundColor: '#a7f3d0',
                         image: (
                             <View style={styles.lottie}>
                                 <Lottie source={require('../assets/animations/boost.json')} autoPlay loop />
@@ -22,20 +22,20 @@ export default function OnboardingScreen() {
                         subtitle: 'Inscreva-se neste canal para aumentar seu nível de produtividade',
                     },
                     {
-                        backgroundColor: '#fff',
+                        backgroundColor: '#fef3c7',
                         image: (
-                            <View>
-                                <Lottie source={require('../assets/animations/boost.json')} autoPlay loop />
+                            <View style={styles.lottie}>
+                                <Lottie source={require('../assets/animations/work.json')} autoPlay loop />
                             </View>
                         ),
                         title: 'Trabalhar Perfeitamente',
                         subtitle: 'Faça seu trabalho perfeitamente sem interrupção',
                     },
                     {
-                        backgroundColor: '#fff',
+                        backgroundColor: '#a78bfa',
                         image: (
-                            <View>
-                                 <Lottie source={require('../assets/animations/boost.json')} autoPlay loop />
+                            <View style={styles.lottie}>
+                                 <Lottie source={require('../assets/animations/achieve.json')} autoPlay loop />
                             </View>
                         ),
                         title: 'Atingir metas mais altas',
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     lottie: {
-        width: width*0.9,
+        width: width*0.9, // Responsividade
         height: width
     }
 })
