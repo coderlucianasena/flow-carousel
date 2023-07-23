@@ -12,14 +12,16 @@ export default function OnboardingScreen() {
         const handleDone = () => {
             navigation.navigate('Home');
         }
+        
     return (
         <View style={styles.container}>
             <Onboarding
                 onDone={handleDone}
                 onSkip={handleDone}
+                DoneButtonComponent={doneButton}
                 containerStyles={{paddingHorizontal: 15}}
                 pages={[
-                    {
+                    { 
                         backgroundColor: '#a7f3d0',
                         image: (
                             <View style={styles.lottie}>
