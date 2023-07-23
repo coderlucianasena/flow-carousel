@@ -16,12 +16,12 @@ export default function OnboardingScreen() {
 
     const doneButton = ({ ...props }) => {
         return (
-            < TouchableOpacity {...props}>
+            <TouchableOpacity style= {...props}>
                 <Text> Done </Text>
             </TouchableOpacity >
         )
     }
-    
+
     return (
         <View style={styles.container}>
             <Onboarding
@@ -74,5 +74,11 @@ const styles = StyleSheet.create({
     lottie: {
         width: width * 0.9, // Responsividade
         height: width
+    },
+    doneButton: {
+        padding: 20,
+        backgroundColor: 'white',
+        borderTopLeftRadius: '100',
+        borderBottomLeftRadius: '100%'
     }
 })
