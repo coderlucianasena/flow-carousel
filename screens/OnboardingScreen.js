@@ -1,22 +1,21 @@
-import { View, Text, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Onboarding from 'react-native-onboarding-swiper';
 import Lottie from 'lottie-react-native';
 import { useNavigation } from '@react-navigation/native';
-import { TouchableOpacity } from 'react-native-web';
 
 const { width, height } = Dimensions.get('window'); // Responsividade
 
 export default function OnboardingScreen() {
     const navigation = useNavigation();
 
-    const handleDone = () => {
+    const handleDone = ()=>{
         navigation.navigate('Home');
     }
 
-    const doneButton = ({ ...props }) => {
+    const doneButton = ({...props})=>{
         return (
-            <TouchableOpacity style= {...props}>
+            <TouchableOpacity style={styles.doneButton} {...props}>
                 <Text> Done </Text>
             </TouchableOpacity >
         )
@@ -27,6 +26,7 @@ export default function OnboardingScreen() {
             <Onboarding
                 onDone={handleDone}
                 onSkip={handleDone}
+                bottomBarHighlight={false}
                 DoneButtonComponent={doneButton}
                 containerStyles={{ paddingHorizontal: 15 }}
                 pages={[
@@ -77,8 +77,8 @@ const styles = StyleSheet.create({
     },
     doneButton: {
         padding: 20,
-        backgroundColor: 'white',
-        borderTopLeftRadius: '100',
-        borderBottomLeftRadius: '100%'
+        // backgroundColor: 'white',
+        // borderTopLeftRadius: '100%',
+        // borderBottomLeftRadius: '100%'
     }
 })
