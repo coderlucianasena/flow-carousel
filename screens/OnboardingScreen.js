@@ -3,25 +3,34 @@ import React from 'react'
 import Onboarding from 'react-native-onboarding-swiper';
 import Lottie from 'lottie-react-native';
 import { useNavigation } from '@react-navigation/native';
+import { TouchableOpacity } from 'react-native-web';
 
-const {width, height} = Dimensions.get('window'); // Responsividade
+const { width, height } = Dimensions.get('window'); // Responsividade
 
 export default function OnboardingScreen() {
-        const navigation = useNavigation();
+    const navigation = useNavigation();
 
-        const handleDone = () => {
-            navigation.navigate('Home');
-        }
-        
+    const handleDone = () => {
+        navigation.navigate('Home');
+    }
+
+    const doneButton = ({ ...props }) => {
+        return (
+            < TouchableOpacity {...props}>
+                <Text> Done </Text>
+            </TouchableOpacity >
+        )
+    }
+    
     return (
         <View style={styles.container}>
             <Onboarding
                 onDone={handleDone}
                 onSkip={handleDone}
                 DoneButtonComponent={doneButton}
-                containerStyles={{paddingHorizontal: 15}}
+                containerStyles={{ paddingHorizontal: 15 }}
                 pages={[
-                    { 
+                    {
                         backgroundColor: '#a7f3d0',
                         image: (
                             <View style={styles.lottie}>
@@ -45,7 +54,7 @@ export default function OnboardingScreen() {
                         backgroundColor: '#a78bfa',
                         image: (
                             <View style={styles.lottie}>
-                                 <Lottie source={require('../assets/animations/achieve.json')} autoPlay loop />
+                                <Lottie source={require('../assets/animations/achieve.json')} autoPlay loop />
                             </View>
                         ),
                         title: 'Atingir metas mais altas',
@@ -63,7 +72,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     lottie: {
-        width: width*0.9, // Responsividade
+        width: width * 0.9, // Responsividade
         height: width
     }
 })
