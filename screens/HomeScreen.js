@@ -2,17 +2,26 @@ import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-nati
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Lottie from 'lottie-react-native';
+import { useNavigation } from '@react-navigation/native';
+import { removeItem } from '../utils/asyncStorage';
 
 const { width, height } = Dimensions.get('window'); // Responsividade
 
 export default function HomeScreen() {
+    const navigation = useNavigation();
+
+    const handleReset = async ()=>{
+      await removeItem('onboarded');
+      navigation.push('Onboarding');
+    }
+
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.lottie}>
                 <Lottie source={require('../assets/animations/confetti.json')} autoPlay loop />
             </View>
             <Text style={styles.text}>Home Page</Text>
-            <TouchableOpacity style={styles.resetButton}>
+            <TouchableOpacity onPress={handleReset} style={styles.resetButton}>
                 <Text>Reset</Text>
             </TouchableOpacity>
         </SafeAreaView>
