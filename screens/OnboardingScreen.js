@@ -28,7 +28,7 @@ export default function OnboardingScreen() {
             <Onboarding
                 onDone={handleDone}
                 onSkip={handleDone}
-                bottomBarHighlight={false}
+                // bottomBarHighlight={false}
                 DoneButtonComponent={doneButton}
                 containerStyles={{ paddingHorizontal: 15 }}
                 pages={[

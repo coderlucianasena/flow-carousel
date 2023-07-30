@@ -10,9 +10,9 @@ const { width, height } = Dimensions.get('window'); // Responsividade
 export default function HomeScreen() {
     const navigation = useNavigation();
 
-    const handleReset = async ()=>{
-      await removeItem('onboarded');
-      navigation.push('Onboarding');
+    const handleReset = async () => {
+        await removeItem('onboarded');
+        navigation.push('Onboarding');
     }
 
     return (
